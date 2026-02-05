@@ -1,4 +1,4 @@
-package main
+package runners
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 
 )
 
-func rodarHtml() {
+func RodarHtml() {
 	
 	var projectName string
 		

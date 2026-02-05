@@ -1,11 +1,11 @@
-package main
+package runners
 
 import (
 	"fmt"
 	"os"
 )
 
-func rodarPy() {
+func RodarPy() {
 	
 	var projectName string
 	

@@ -1,32 +1,50 @@
-# Projeto S: Automatizador de Workflow
-Este é um utilitário desenvolvido em Go para automatizar a criação e o gerenciamento de projetos em diferentes tecnologias. Ele foi pensado para ser executado via terminal, facilitando o dia a dia de desenvolvimento.
+# s-go 🚀
 
-## Funcionalidades
-O comando permite interagir com diferentes stacks através de flags simples:
-* Go (-g / go): Configura a estrutura base para novos projetos em Go.
-* Python (-p / python): Inicializa ambientes e arquivos para Python.
-* Web (-h / html): Cria a estrutura de pastas e arquivos (HTML, CSS, JS) para web design.
-* Update (-u / update): O próprio comando se recompila e se atualiza no diretório de binários do sistema.
-* Help (--h / help): Exibe a lista completa de comandos.
+O `s-go` é uma ferramenta CLI (Command Line Interface) projetada para automatizar a criação de arquivos boilerplate e estruturas de projetos para Go, Python e Web (HTML/CSS/JS), ajudando você a economizar tempo em configurações repetitivas.
 
-## Tecnologias Utilizadas
-* Linguagem: Go (Golang)
-* Ambiente: Big Linux
-* Integrações: Python, HTML, CSS e JavaScript
+## 🛠️ Instalação
 
-## Como instalar
-1. Certifique-se de ter o Go instalado em sua máquina.
-2. Clone este repositório.
-3. No terminal, execute: go build -o s *.go
-4. Mova o executável para sua pasta de binários: sudo mv s /usr/local/bin
-5. Agora você pode executar o comando `s` de qualquer lugar no terminal.
+Siga os passos abaixo para compilar e instalar o `s-go` no seu sistema:
 
-## Como usar
-Abra o terminal e utilize o comando `s` seguido da flag desejada. Exemplos:
-* `s go` ou `s -g`: Para iniciar um projeto em Go.
-* `s python` ou `s -p`: Para iniciar um projeto em Python.
-* `s html` ou `s -h`: Para iniciar um projeto web.
-* `s update` ou `s -u`: Para atualizar o comando S.
-* `s help` ou `s --h`: Para exibir a ajuda.
+1. **Clone o repositório** (caso ainda não tenha feito):
+   ```bash
+   git clone https://github.com/devcombiscoito/s-go.git
+   cd s-go
+   ```
 
+2. **Compile o projeto**:
+   ```bash
+   go build -o s ./cmd/s
+   ```
 
+3. **Instale no sistema**:
+   Este comando moverá o executável para `/usr/local/bin` (pode pedir senha de sudo).
+   ```bash
+   ./s install
+   ```
+
+## 💻 Comandos Disponíveis
+
+Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
+
+| Comando | Atalho | Descrição |
+|---------|--------|-----------|
+| `s go` | `s -g` | Cria um novo projeto Go, inicializa o `go.mod` e cria um `main.go`. |
+| `s python` | `s -p` | Gera um script Python básico (`main.py`) pronto para rodar. |
+| `s html` | `s -h` | Cria uma estrutura Web completa com `index.html`, `styles.css` e `script.js`. |
+| `s update` | `s --u` | Atualiza a ferramenta compilando a versão mais recente do código fonte. |
+| `s help` | `s --h` | Exibe a lista de comandos e ajuda. |
+| `s uninstall` | `s -u`| Remove o comando `s` do seu sistema. |
+
+### Dicas Úteis
+- **Instalação/Desinstalação Rápida**: Adicione a flag `-y` aos comandos `install` ou `uninstall` para pular a confirmação (ex: `./s install -y`).
+
+## 📁 Estrutura do Projeto
+
+- **cmd/s**: Ponto de entrada da aplicação (main).
+- **internal/app**: Lógica de verificação e roteamento de comandos.
+- **internal/commands**: Implementação das funcionalidades de instalação, atualização e help.
+- **internal/commands/runners**: Lógica específica para gerar os arquivos de cada linguagem (Go, Python, HTML).
+
+---
+Feito com dedicação por Lorenzo. Aproveite!

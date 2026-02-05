@@ -1,4 +1,4 @@
-package main
+package runners
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func rodarGo() {
+func RodarGo() {
 	var projectName string
 	
 	fmt.Print("Qual o nome do projeto Go? ")

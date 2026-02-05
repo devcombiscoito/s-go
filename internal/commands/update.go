@@ -1,14 +1,14 @@
-package main
+package commands
 
 import (
 	"os/exec"
 	"os"
 )
 
-func rodarUpdate() {
+func RodarUpdate() {
 	directory := "/usr/local/bin"
 	
-	execUpdate := exec.Command("go", "build", "-o", "s")
+	execUpdate := exec.Command("go", "build", "-o", "s", "./cmd/s")
 	execUpdate.Run()
 
 
