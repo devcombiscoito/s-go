@@ -10,7 +10,7 @@ func RodarUpdate() {
 	directory := "/usr/local/bin"
 
 	fmt.Println("==> Buscando atualizações no GitHub...")
-	execPull := exec.Command("git", "pull", "main", "master")
+	execPull := exec.Command("git", "pull", "main", "main")
 	execPull.Stdout = os.Stdout
 	execPull.Stderr = os.Stderr
 	execPull.Run()

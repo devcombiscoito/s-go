@@ -11,7 +11,7 @@ import (
 
 func CheckUpdate() {
 	// URL do arquivo raw no GitHub
-	url := "https://raw.githubusercontent.com/devcombiscoito/s-go/master/internal/app/version.go"
+	url := "https://raw.githubusercontent.com/devcombiscoito/s-go/main/internal/app/version.go"
 
 	client := http.Client{
 		Timeout: 2 * time.Second, // Timeout curto para não travar o cli

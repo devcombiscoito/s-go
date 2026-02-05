@@ -33,6 +33,7 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 | `s python` | `s -p` | Gera um script Python básico (`main.py`) pronto para rodar. |
 | `s html` | `s -h` | Cria uma estrutura Web completa com `index.html`, `styles.css` e `script.js`. |
 | `s update` | `s --u` | Atualiza a ferramenta compilando a versão mais recente do código fonte. |
+| `s version` | `s --v` | Exibe a versão instalada do `s-go`. |
 | `s help` | `s --h` | Exibe a lista de comandos e ajuda. |
 | `s uninstall` | `s -u`| Remove o comando `s` do seu sistema. |
 

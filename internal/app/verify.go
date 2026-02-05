@@ -40,6 +40,8 @@ func Verify() {
 		} else {
 			commands.AskUninstall()
 		}
+	} else if arg == "version" || arg == "--v" {
+		fmt.Printf("s version %s\n", CurrentVersion)
 	} else {
 		fmt.Println(`Argumento não identificado. Escreva "s help" para ajuda.`)
 	}

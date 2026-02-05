@@ -18,6 +18,7 @@ Sistema:
   install -i    Instala o 's' globalmente (precisa de sudo)
   uninstall -u  Remove o 's' do sistema
   update, --u   Recompila e atualiza o 's'
+  version, --v  Mostra a versão instalada
   help, --h     Mostra este menu
 
 Dica: Use 's install -y' para instalar sem perguntas.
