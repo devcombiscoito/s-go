@@ -41,11 +41,12 @@ Critérios gerais:
 - **Baixa**: problemas de configuração com impacto limitado
 
 ## Versões suportadas
-Mantemos suporte apenas para a versão principal mais recente.
+Mantemos suporte apenas para a versão principal mais recente e LTS.
+O ciclo LTS atual é de **24 meses**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.0.x   | :white_check_mark: |
+| 2.0.x (LTS, 2026-02-06 até 2028-02-06) | :white_check_mark: |
 | 1.0.x   | :x:                |
 | 0.0.0   | :x:                |
 

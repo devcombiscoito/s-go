@@ -58,6 +58,10 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 - **Instalação/Desinstalação Rápida**: Adicione a flag `-y` aos comandos `install` ou `uninstall` para pular a confirmação (ex: `./s install -y`).
 - **Dependências**: Se `go`, `git` ou `python` não estiverem instalados, o `install` oferece instalação automática no Linux, Windows e macOS.
 
+## ✅ Suporte LTS
+A versão **2.0.0** é a linha **LTS** atual, com suporte de **24 meses**.
+Válida de **2026-02-06** até **2028-02-06**.
+
 ## 📁 Estrutura do Projeto
 
 - **cmd/s**: Ponto de entrada da aplicação (main).
