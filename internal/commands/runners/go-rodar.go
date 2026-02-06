@@ -4,18 +4,28 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"path/filepath"
 )
 
 func RodarGo() {
+	RodarGoAt("")
+}
+
+func RodarGoAt(baseDir string) {
 	var projectName string
 
 	fmt.Print("Qual o nome do projeto Go? ")
 	fmt.Scan(&projectName)
 
-	os.Mkdir(projectName, 0755)
+	projectPath := projectName
+	if baseDir != "" {
+		projectPath = filepath.Join(baseDir, projectName)
+	}
+
+	os.Mkdir(projectPath, 0755)
 
 	execCommand := exec.Command("go", "mod", "init", projectName)
-	execCommand.Dir = projectName
+	execCommand.Dir = projectPath
 	execCommand.Run()
 
 	main := `package main
@@ -28,7 +38,7 @@ func main() {
 	fmt.Print("Hello, world!")
 }`
 
-	os.WriteFile(projectName+"/main.go", []byte(main), 0644)
+	os.WriteFile(filepath.Join(projectPath, "main.go"), []byte(main), 0644)
 
 	fmt.Println("🚀 Tudo pronto! Arquivo main.go criado.")
 }

@@ -26,6 +26,23 @@ func Verify() {
 		help.Help()
 	} else if arg == "python" || arg == "-p" {
 		runners.RodarPy()
+	} else if arg == "list" {
+		commands.ListTemplates()
+	} else if arg == "init" {
+		commands.InitProject()
+	} else if arg == "config" {
+		if len(os.Args) > 2 {
+			switch os.Args[2] {
+			case "list":
+				commands.ConfigList()
+			case "edit":
+				commands.ConfigEdit()
+			default:
+				fmt.Println("Uso: s config list | edit")
+			}
+		} else {
+			fmt.Println("Uso: s config list | edit")
+		}
 	} else if arg == "update" || arg == "--u" {
 		commands.RodarUpdate()
 	} else if arg == "install" || arg == "-i" {

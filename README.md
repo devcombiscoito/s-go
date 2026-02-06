@@ -53,6 +53,10 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 | `s python` | `s -p` | Gera um script Python básico (`main.py`) pronto para rodar. |
 | `s html` | `s -h` | Cria uma estrutura Web completa com `index.html`, `styles.css` e `script.js`. |
 | `s update` | `s --u` | Atualiza a ferramenta compilando a versão mais recente do código fonte. |
+| `s list` |  | Lista templates disponíveis. |
+| `s init` |  | Fluxo interativo para criar projeto. |
+| `s config list` |  | Lista configurações. |
+| `s config edit` |  | Abre o arquivo de configuração no editor. |
 | `s version` | `s --v` | Exibe a versão instalada do `s-go`. |
 | `s help` | `s --h` | Exibe a lista de comandos e ajuda. |
 | `s uninstall` | `s -u`| Remove o comando `s` do seu sistema. |
@@ -127,6 +131,10 @@ This creates the `SHA256SUMS` file.
 | `s python` | `s -p` | Generates a basic Python script (`main.py`). |
 | `s html` | `s -h` | Creates a web structure with `index.html`, `styles.css`, and `script.js`. |
 | `s update` | `s --u` | Updates the tool by rebuilding the latest source. |
+| `s list` |  | Lists available templates. |
+| `s init` |  | Interactive project creation. |
+| `s config list` |  | Lists configurations. |
+| `s config edit` |  | Opens the config file in the editor. |
 | `s version` | `s --v` | Shows the installed `s-go` version. |
 | `s help` | `s --h` | Shows help and commands. |
 | `s uninstall` | `s -u`| Removes the `s` command from your system. |

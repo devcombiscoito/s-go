@@ -21,6 +21,12 @@ Sistema:
   version, --v  Mostra a versão instalada
   help, --h     Mostra este menu
 
+Configuração:
+  list             Lista templates disponíveis
+  init             Fluxo interativo para criar projeto
+  config list      Lista configurações
+  config edit      Abre configuração no editor
+
 Dica: Use 's install -y' para instalar sem perguntas.
 Nota: English version below.
 
@@ -42,6 +48,12 @@ System:
   update, --u   Rebuild and update 's'
   version, --v  Show installed version
   help, --h     Show this menu
+
+Config:
+  list             List available templates
+  init             Interactive project creation
+  config list      List configurations
+  config edit      Open config in editor
 
 Tip: Use 's install -y' to install without prompts.
 	`)
