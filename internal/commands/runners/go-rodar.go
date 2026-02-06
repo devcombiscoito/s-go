@@ -8,7 +8,7 @@ import (
 
 func RodarGo() {
 	var projectName string
-	
+
 	fmt.Print("Qual o nome do projeto Go? ")
 	fmt.Scan(&projectName)
 
@@ -17,7 +17,7 @@ func RodarGo() {
 	execCommand := exec.Command("go", "mod", "init", projectName)
 	execCommand.Dir = projectName
 	execCommand.Run()
-	
+
 	main := `package main
 	
 import (
@@ -28,7 +28,7 @@ func main() {
 	fmt.Print("Hello, world!")
 }`
 
-	os.WriteFile(projectName+"/main.go",  []byte(main), 0644)
+	os.WriteFile(projectName+"/main.go", []byte(main), 0644)
 
 	fmt.Println("🚀 Tudo pronto! Arquivo main.go criado.")
 }

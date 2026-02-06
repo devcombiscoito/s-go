@@ -3,13 +3,12 @@ package runners
 import (
 	"fmt"
 	"os"
-
 )
 
 func RodarHtml() {
-	
+
 	var projectName string
-		
+
 	fmt.Print("Qual o nome do projeto Html? ")
 	fmt.Scan(&projectName)
 
@@ -29,7 +28,7 @@ func RodarHtml() {
 </body>
 </html>`
 
-	css :=  `* {
+	css := `* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -46,8 +45,8 @@ body {
 
 	js := `console.log("Script carregado com sucesso!");`
 
-	os.WriteFile(projectName+"/index.html",  []byte(html), 0644)
-	os.WriteFile(projectName+"/styles.css",  []byte(css), 0644)
+	os.WriteFile(projectName+"/index.html", []byte(html), 0644)
+	os.WriteFile(projectName+"/styles.css", []byte(css), 0644)
 	os.WriteFile(projectName+"/script.js", []byte(js), 0644)
 	fmt.Println("🚀 Tudo pronto!")
 }

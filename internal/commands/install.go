@@ -12,7 +12,7 @@ func NoAskInstall() {
 	if !ensureDependencies() {
 		return
 	}
-	
+
 	binName := binaryName()
 	build := exec.Command("go", "build", "-o", binName, "./cmd/s")
 	build.Stdout = os.Stdout
