@@ -4,7 +4,8 @@ O `s-go` é uma ferramenta CLI (Command Line Interface) projetada para automatiz
 
 ## 🛠️ Instalação
 
-Siga os passos abaixo para compilar e instalar o `s-go` no seu sistema:
+Siga os passos abaixo para compilar e instalar o `s-go` no seu sistema.
+O comando `install` agora verifica dependências (`go`, `git`, `python`) e oferece instalação automática.
 
 1. **Clone o repositório** (caso ainda não tenha feito):
    ```bash
@@ -24,6 +25,13 @@ Siga os passos abaixo para compilar e instalar o `s-go` no seu sistema:
    ./s install
    ```
 
+### Instalação via Release
+Você também pode baixar os binários prontos na página de Releases do GitHub:
+- https://github.com/devcombiscoito/s-go/releases
+- `s` (Linux)
+- `s.exe` (Windows)
+- `s-darwin-amd64` e `s-darwin-arm64` (macOS)
+
 ## 💻 Comandos Disponíveis
 
 Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
@@ -40,6 +48,7 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 
 ### Dicas Úteis
 - **Instalação/Desinstalação Rápida**: Adicione a flag `-y` aos comandos `install` ou `uninstall` para pular a confirmação (ex: `./s install -y`).
+- **Dependências**: Se `go`, `git` ou `python` não estiverem instalados, o `install` oferece instalação automática no Linux, Windows e macOS.
 
 ## 📁 Estrutura do Projeto
 
