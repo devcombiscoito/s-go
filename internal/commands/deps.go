@@ -229,7 +229,29 @@ func installWindows(name string) error {
 		return runCommand(cmd)
 	}
 
-	return fmt.Errorf("nenhum gerenciador encontrado (winget ou choco)")
+	manager, err := ensureWindowsPackageManager()
+	if err != nil {
+		return err
+	}
+
+	switch manager {
+	case "winget":
+		id := wingetID(name)
+		if id == "" {
+			return fmt.Errorf("pacote não mapeado para %s", name)
+		}
+		cmd := []string{"winget", "install", "-e", "--id", id}
+		return runCommand(cmd)
+	case "choco":
+		pkg := chocoPackage(name)
+		if pkg == "" {
+			return fmt.Errorf("pacote não mapeado para %s", name)
+		}
+		cmd := []string{"choco", "install", "-y", pkg}
+		return runCommand(cmd)
+	default:
+		return fmt.Errorf("nenhum gerenciador disponível")
+	}
 }
 
 func wingetID(name string) string {
@@ -254,6 +276,69 @@ func chocoPackage(name string) string {
 		return "python"
 	}
 	return ""
+}
+
+func ensureWindowsPackageManager() (string, error) {
+	fmt.Println("Nenhum gerenciador encontrado (winget ou choco).")
+	fmt.Println("Selecione um para instalar:")
+	fmt.Println("  1) winget (Microsoft App Installer)")
+	fmt.Println("  2) choco (Chocolatey)")
+
+	var choice string
+	fmt.Print("Opcao [1/2]: ")
+	fmt.Scanln(&choice)
+
+	switch strings.TrimSpace(choice) {
+	case "1":
+		if err := installWinget(); err != nil {
+			return "", err
+		}
+		if _, err := exec.LookPath("winget"); err == nil {
+			return "winget", nil
+		}
+		return "", fmt.Errorf("winget nao encontrado apos instalacao")
+	case "2":
+		if err := installChoco(); err != nil {
+			return "", err
+		}
+		if _, err := exec.LookPath("choco"); err == nil {
+			return "choco", nil
+		}
+		return "", fmt.Errorf("choco nao encontrado apos instalacao")
+	default:
+		return "", fmt.Errorf("opcao invalida")
+	}
+}
+
+func installWinget() error {
+	cmd := []string{
+		"powershell",
+		"-NoProfile",
+		"-ExecutionPolicy",
+		"Bypass",
+		"-Command",
+		"$ProgressPreference='SilentlyContinue'; " +
+			"$url='https://aka.ms/getwinget'; " +
+			"$out=\"$env:TEMP\\Microsoft.DesktopAppInstaller.msixbundle\"; " +
+			"Invoke-WebRequest -Uri $url -OutFile $out; " +
+			"Add-AppxPackage -Path $out",
+	}
+	return runCommand(cmd)
+}
+
+func installChoco() error {
+	cmd := []string{
+		"powershell",
+		"-NoProfile",
+		"-ExecutionPolicy",
+		"Bypass",
+		"-Command",
+		"Set-ExecutionPolicy Bypass -Scope Process -Force; " +
+			"[System.Net.ServicePointManager]::SecurityProtocol = " +
+			"[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; " +
+			"iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))",
+	}
+	return runCommand(cmd)
 }
 
 func runWithOptionalSudo(cmd []string) error {
