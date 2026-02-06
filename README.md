@@ -18,7 +18,8 @@ Siga os passos abaixo para compilar e instalar o `s-go` no seu sistema:
    ```
 
 3. **Instale no sistema**:
-   Este comando moverá o executável para `/usr/local/bin` (pode pedir senha de sudo).
+   - Linux/macOS: move o executável para `/usr/local/bin` (pode pedir senha de sudo).
+   - Windows: move o executável para `%LOCALAPPDATA%\\s-go\\bin` (garanta esse caminho no `PATH`).
    ```bash
    ./s install
    ```

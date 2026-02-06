@@ -15,7 +15,7 @@ Execução:
   html, -h     Abre index.html
 
 Sistema:
-  install -i    Instala o 's' globalmente (precisa de sudo)
+  install -i    Instala o 's' globalmente (sudo no Linux/macOS)
   uninstall -u  Remove o 's' do sistema
   update, --u   Recompila e atualiza o 's'
   version, --v  Mostra a versão instalada
