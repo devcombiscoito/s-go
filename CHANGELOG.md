@@ -4,7 +4,7 @@ Todas as mudanças relevantes deste projeto serão documentadas aqui.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e este projeto segue [SemVer](https://semver.org/lang/pt-BR/).
 
-## [2.0.0] - 2026-02-06 - Grande Atualização!!!
+## [2.0.0] - 2026-02-06 - Grande Atualização!!! (LTS)
 ### Adicionado
 - Verificação e instalação automática de dependências (`go`, `git`, `python`) durante `install`.
 - Suporte de instalação em Windows e macOS.
