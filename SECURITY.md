@@ -43,13 +43,14 @@ Critérios gerais:
 - **Baixa**: problemas de configuração com impacto limitado
 
 ## Versões suportadas
-Todas as versões têm suporte por **50 dias após o release**.
-Exemplo: release em **2026-02-06** → suporte até **2026-03-28**.
+LTS tem suporte por **6 meses após o release**.
+Não‑LTS têm suporte por **50 dias após o release**.
+Exemplos: release em **2026-02-06** → LTS até **2026-08-06**; não‑LTS até **2026-03-28**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.7.x (LTS) | :white_check_mark: |
-| 2.0.x       | :white_check_mark: |
+| 2.0.x (LTS) | :white_check_mark: |
+| 2.7.x       | :white_check_mark: |
 | 1.0.x       | :white_check_mark: |
 | 0.0.0       | :white_check_mark: |
 
@@ -117,13 +118,14 @@ General criteria:
 - **Low**: configuration issues with limited impact
 
 ## Supported versions
-All versions are supported for **50 days after release**.
-Example: released on **2026-02-06** → supported until **2026-03-28**.
+LTS is supported for **6 months after release**.
+Non‑LTS is supported for **50 days after release**.
+Examples: released on **2026-02-06** → LTS until **2026-08-06**; non‑LTS until **2026-03-28**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.7.x (LTS) | :white_check_mark: |
-| 2.0.x       | :white_check_mark: |
+| 2.0.x (LTS) | :white_check_mark: |
+| 2.7.x       | :white_check_mark: |
 | 1.0.x       | :white_check_mark: |
 | 0.0.0       | :white_check_mark: |
 
