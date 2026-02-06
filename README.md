@@ -7,10 +7,13 @@ Nota: a versão em inglês está no final.
 
 ## 🛠️ Instalação
 
-Siga os passos abaixo para compilar e instalar o `s-go` no seu sistema.
-O comando `install` agora verifica dependências (`go`, `git`, `python`) e oferece instalação automática.
+Há duas formas: **a partir do código-fonte** ou **via Release (binário pronto)**.
 
-1. **Clone o repositório** (caso ainda não tenha feito):
+O comando `install` verifica dependências (`go`, `git`, `python`) e oferece instalação automática.
+
+### Opção A — Código-fonte (recomendado para desenvolvedores)
+
+1. **Clone o repositório**:
    ```bash
    git clone https://github.com/devcombiscoito/s-go.git
    cd s-go
@@ -28,13 +31,22 @@ O comando `install` agora verifica dependências (`go`, `git`, `python`) e ofere
    ./s install
    ```
 
-### Instalação via Release
-Você também pode baixar os binários prontos na página de Releases do GitHub:
+### Opção B — Release (binário pronto)
+Baixe o binário na página de Releases do GitHub:
 - https://github.com/devcombiscoito/s-go/releases
 - `s` (Linux)
 - `s.exe` (Windows)
 - `s-darwin-amd64` e `s-darwin-arm64` (macOS)
-No Windows, se você executar `s.exe install` e não tiver `winget` ou `choco`, o comando pergunta qual instalar e tenta instalar automaticamente.
+
+Depois:
+- Linux/macOS: mova o binário para `/usr/local/bin` e dê permissão:
+  ```bash
+  sudo mv s /usr/local/bin/s
+  sudo chmod +x /usr/local/bin/s
+  ```
+- Windows: mova `s.exe` para `%LOCALAPPDATA%\\s-go\\bin` e adicione ao `PATH`.
+
+Nota: o `install` foi feito para o **fluxo com código-fonte**. Se você só baixou o binário, não precisa rodar `s.exe install`.
 
 ### Checksums
 Para gerar os checksums dos binários:
@@ -66,7 +78,8 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 - **Dependências**: Se `go`, `git` ou `python` não estiverem instalados, o `install` oferece instalação automática no Linux, Windows e macOS.
 
 ## ✅ Suporte LTS
-A versão **2.7.0** é a linha **LTS** atual, com suporte até **2026-03-30**.
+A versão **2.7.0** é a linha **LTS** atual.
+O período de suporte é de **50 dias após o release** (ex: lançado em 2026-02-06 → suporte até 2026-03-28).
 
 ## 📁 Estrutura do Projeto
 
@@ -86,10 +99,13 @@ Feito com dedicação por Lorenzo. Aproveite!
 
 ## 🛠️ Installation
 
-Follow the steps below to build and install `s-go` on your system.
-The `install` command now checks dependencies (`go`, `git`, `python`) and offers automatic installation.
+There are two ways: **from source** or **via Release (prebuilt binary)**.
 
-1. **Clone the repository** (if you haven't):
+The `install` command checks dependencies (`go`, `git`, `python`) and offers automatic installation.
+
+### Option A — From source (recommended for developers)
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/devcombiscoito/s-go.git
    cd s-go
@@ -107,13 +123,22 @@ The `install` command now checks dependencies (`go`, `git`, `python`) and offers
    ./s install
    ```
 
-### Installation via Release
-You can also download prebuilt binaries from GitHub Releases:
+### Option B — Release (prebuilt binary)
+Download the binary from GitHub Releases:
 - https://github.com/devcombiscoito/s-go/releases
 - `s` (Linux)
 - `s.exe` (Windows)
 - `s-darwin-amd64` and `s-darwin-arm64` (macOS)
-On Windows, if you run `s.exe install` without `winget` or `choco`, the command asks which one to install and attempts it automatically.
+
+Then:
+- Linux/macOS: move the binary to `/usr/local/bin` and make it executable:
+  ```bash
+  sudo mv s /usr/local/bin/s
+  sudo chmod +x /usr/local/bin/s
+  ```
+- Windows: move `s.exe` to `%LOCALAPPDATA%\\s-go\\bin` and add it to `PATH`.
+
+Note: `install` is meant for the **source** workflow. If you only downloaded the binary, you don't need to run `s.exe install`.
 
 ### Checksums
 Generate checksums for release binaries:
@@ -143,7 +168,8 @@ This creates the `SHA256SUMS` file.
 - **Dependencies**: If `go`, `git`, or `python` are missing, `install` offers automatic installation on Linux, Windows, and macOS.
 
 ## ✅ LTS Support
-Version **2.7.0** is the current **LTS** line, supported until **2026-03-30**.
+Version **2.7.0** is the current **LTS** line.
+Support lasts **50 days after release** (e.g., released on 2026-02-06 → supported until 2026-03-28).
 
 ## 📁 Project Structure
 

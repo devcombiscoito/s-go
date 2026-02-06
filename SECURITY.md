@@ -43,14 +43,15 @@ Critérios gerais:
 - **Baixa**: problemas de configuração com impacto limitado
 
 ## Versões suportadas
-Mantemos suporte apenas para a versão principal mais recente e LTS.
-O ciclo LTS atual vai até **2026-03-30**.
+Todas as versões têm suporte por **50 dias após o release**.
+Exemplo: release em **2026-02-06** → suporte até **2026-03-28**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.7.x (LTS, até 2026-03-30) | :white_check_mark: |
-| 1.0.x   | :x:                |
-| 0.0.0   | :x:                |
+| 2.7.x (LTS) | :white_check_mark: |
+| 2.0.x       | :white_check_mark: |
+| 1.0.x       | :white_check_mark: |
+| 0.0.0       | :white_check_mark: |
 
 ## Escopo
 Inclui:
@@ -116,14 +117,15 @@ General criteria:
 - **Low**: configuration issues with limited impact
 
 ## Supported versions
-We only support the latest major and LTS.
-Current LTS window ends on **2026-03-30**.
+All versions are supported for **50 days after release**.
+Example: released on **2026-02-06** → supported until **2026-03-28**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.7.x (LTS, until 2026-03-30) | :white_check_mark: |
-| 1.0.x   | :x:                |
-| 0.0.0   | :x:                |
+| 2.7.x (LTS) | :white_check_mark: |
+| 2.0.x       | :white_check_mark: |
+| 1.0.x       | :white_check_mark: |
+| 0.0.0       | :white_check_mark: |
 
 ## Scope
 Includes:
