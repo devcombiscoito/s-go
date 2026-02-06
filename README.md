@@ -32,6 +32,13 @@ Você também pode baixar os binários prontos na página de Releases do GitHub:
 - `s.exe` (Windows)
 - `s-darwin-amd64` e `s-darwin-arm64` (macOS)
 
+### Checksums
+Para gerar os checksums dos binários:
+```bash
+./scripts/checksums.sh s s.exe s-darwin-amd64 s-darwin-arm64
+```
+Isso cria o arquivo `SHA256SUMS`.
+
 ## 💻 Comandos Disponíveis
 
 Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
