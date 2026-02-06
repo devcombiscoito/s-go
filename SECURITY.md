@@ -1,4 +1,8 @@
-# Versionamento
+# Versionamento e Segurança
+
+## Reportando vulnerabilidades
+Se você encontrar uma vulnerabilidade, por favor abra um **Security Advisory** no GitHub:
+https://github.com/devcombiscoito/s-go/security/advisories/new
 
 ## Versões que funcionam
 Todas essas versões ainda funcionam:

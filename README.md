@@ -1,4 +1,5 @@
 # s-go 🚀
+[![CI](https://github.com/devcombiscoito/s-go/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/devcombiscoito/s-go/actions/workflows/ci.yml)
 
 O `s-go` é uma ferramenta CLI (Command Line Interface) projetada para automatizar a criação de arquivos boilerplate e estruturas de projetos para Go, Python e Web (HTML/CSS/JS), ajudando você a economizar tempo em configurações repetitivas.
 
