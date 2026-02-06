@@ -6,6 +6,15 @@ e este projeto segue [SemVer](https://semver.org/lang/pt-BR/).
 
 Nota: a versão em inglês está no final.
 
+## [2.7.0] - 2026-02-06
+### Adicionado
+- `s init` com fluxo interativo de criação de projetos.
+- `s list` para listar templates disponíveis.
+- `s config list` e `s config edit` para gerenciar configurações.
+
+### Alterado
+- `s init` agora usa o diretório atual como base.
+
 ## [2.0.0] - 2026-02-06 - Grande Atualização!!! (LTS)
 ### Adicionado
 - Verificação e instalação automática de dependências (`go`, `git`, `python`) durante `install`.
@@ -24,6 +33,7 @@ Nota: a versão em inglês está no final.
 - CLI inicial para gerar projetos Go, Python e HTML.
 - Comandos `install`, `uninstall`, `update`, `version` e `help`.
 
+[2.7.0]: https://github.com/devcombiscoito/s-go/releases/tag/v2.7.0
 [2.0.0]: https://github.com/devcombiscoito/s-go/releases/tag/v2.0.0
 
 ---
@@ -33,6 +43,15 @@ All notable changes to this project will be documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [SemVer](https://semver.org/).
+
+## [2.7.0] - 2026-02-06
+### Added
+- `s init` interactive project creation.
+- `s list` to list available templates.
+- `s config list` and `s config edit` to manage config.
+
+### Changed
+- `s init` now uses the current directory as base.
 
 ## [2.0.0] - 2026-02-06 - Major Update!!! (LTS)
 ### Added
@@ -52,4 +71,5 @@ and this project adheres to [SemVer](https://semver.org/).
 - Initial CLI to generate Go, Python, and HTML projects.
 - `install`, `uninstall`, `update`, `version`, and `help` commands.
 
+[2.7.0]: https://github.com/devcombiscoito/s-go/releases/tag/v2.7.0
 [2.0.0]: https://github.com/devcombiscoito/s-go/releases/tag/v2.0.0

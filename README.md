@@ -66,8 +66,7 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 - **Dependências**: Se `go`, `git` ou `python` não estiverem instalados, o `install` oferece instalação automática no Linux, Windows e macOS.
 
 ## ✅ Suporte LTS
-A versão **2.0.0** é a linha **LTS** atual, com suporte de **24 meses**.
-Válida de **2026-02-06** até **2028-02-06**.
+A versão **2.7.0** é a linha **LTS** atual, com suporte até **2026-03-30**.
 
 ## 📁 Estrutura do Projeto
 
@@ -144,8 +143,7 @@ This creates the `SHA256SUMS` file.
 - **Dependencies**: If `go`, `git`, or `python` are missing, `install` offers automatic installation on Linux, Windows, and macOS.
 
 ## ✅ LTS Support
-Version **2.0.0** is the current **LTS** line with **24 months** of support.
-Valid from **2026-02-06** to **2028-02-06**.
+Version **2.7.0** is the current **LTS** line, supported until **2026-03-30**.
 
 ## 📁 Project Structure
 

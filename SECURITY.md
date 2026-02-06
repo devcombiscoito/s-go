@@ -44,11 +44,11 @@ Critérios gerais:
 
 ## Versões suportadas
 Mantemos suporte apenas para a versão principal mais recente e LTS.
-O ciclo LTS atual é de **24 meses**.
+O ciclo LTS atual vai até **2026-03-30**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.0.x (LTS, 2026-02-06 até 2028-02-06) | :white_check_mark: |
+| 2.7.x (LTS, até 2026-03-30) | :white_check_mark: |
 | 1.0.x   | :x:                |
 | 0.0.0   | :x:                |
 
@@ -117,11 +117,11 @@ General criteria:
 
 ## Supported versions
 We only support the latest major and LTS.
-Current LTS window is **24 months**.
+Current LTS window ends on **2026-03-30**.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.0.x (LTS, 2026-02-06 to 2028-02-06) | :white_check_mark: |
+| 2.7.x (LTS, until 2026-03-30) | :white_check_mark: |
 | 1.0.x   | :x:                |
 | 0.0.0   | :x:                |
 

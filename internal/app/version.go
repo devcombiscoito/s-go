@@ -1,3 +1,3 @@
 package app
 
-const CurrentVersion = "2.0.0"
+const CurrentVersion = "2.7.0"
