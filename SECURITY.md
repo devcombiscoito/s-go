@@ -2,6 +2,8 @@
 
 Obrigado por ajudar a manter o s-go seguro. Esta política explica como reportar vulnerabilidades, nosso processo de resposta e o que está ou não em escopo.
 
+Nota: a versão em inglês está no final.
+
 ## Como reportar
 Por favor **não** abra issues públicas para vulnerabilidades.
 
@@ -68,3 +70,76 @@ Não inclui:
 
 ## Agradecimentos
 Contribuições de segurança são bem-vindas e serão reconhecidas nos release notes quando apropriado.
+
+---
+
+# Security Policy (English)
+
+Thanks for helping keep s-go secure. This policy explains how to report vulnerabilities, our response process, and what is in or out of scope.
+
+## How to report
+Please **do not** open public issues for vulnerabilities.
+
+Use the GitHub Security Advisory:
+https://github.com/devcombiscoito/s-go/security/advisories/new
+
+If you cannot access the advisory, open a **non-sensitive** issue and request private contact.
+
+## What to include
+Provide as much as possible:
+- s-go version (`s version`)
+- OS and version
+- Architecture (e.g., amd64, arm64)
+- Detailed steps to reproduce
+- Expected vs actual results
+- Potential impact (e.g., RCE, data leak)
+- Relevant logs/output (if any)
+- POC (if available), with safe instructions
+
+## Response SLA
+- **Acknowledgement**: within 72 hours
+- **Status updates**: weekly while actively investigating
+- **Fix**: as fast as possible, based on severity
+
+## Disclosure process
+We follow responsible disclosure:
+1. Receive and assess severity
+2. Reproduce and confirm
+3. Develop and test a fix
+4. Release the fix and communicate the vulnerability
+
+## Severity
+General criteria:
+- **Critical**: remote code execution, broad data exposure
+- **High**: local security bypass, privilege escalation
+- **Medium**: limited exposure, meaningful denial of service
+- **Low**: configuration issues with limited impact
+
+## Supported versions
+We only support the latest major and LTS.
+Current LTS window is **24 months**.
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 2.0.x (LTS, 2026-02-06 to 2028-02-06) | :white_check_mark: |
+| 1.0.x   | :x:                |
+| 0.0.0   | :x:                |
+
+## Scope
+Includes:
+- `s-go` CLI
+- Scripts and templates in this repository
+- Automatic updates of the CLI itself
+
+Excludes:
+- Third-party dependencies
+- User local environment
+- Issues in external tools or operating systems
+
+## Reporting best practices
+- Do not exploit beyond what is needed to prove impact
+- Avoid accessing data that is not yours
+- Do not publish POCs before a fix is released
+
+## Thanks
+Security contributions are welcome and may be acknowledged in release notes.

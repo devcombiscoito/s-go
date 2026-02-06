@@ -4,6 +4,22 @@ about: Suggest an idea for s-go
 labels: enhancement
 ---
 
+**Problema**
+Que problema você quer resolver?
+
+**Solução proposta**
+Descreva a solução que você deseja.
+
+**Alternativas**
+Descreva alternativas que você considerou.
+
+**Contexto adicional**
+Qualquer outro contexto aqui.
+
+Nota: English version below.
+
+---
+
 **Problem**
 What problem are you trying to solve?
 

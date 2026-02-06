@@ -22,5 +22,27 @@ Sistema:
   help, --h     Mostra este menu
 
 Dica: Use 's install -y' para instalar sem perguntas.
+Nota: English version below.
+
+---
+
+Command 's' - Your programming Swiss army knife
+
+Usage:
+  s [command] [options]
+
+Execution:
+  go, -g       Run Go project (run .)
+  python, -p   Run Python script
+  html, -h     Open index.html
+
+System:
+  install -i    Install 's' globally (sudo on Linux/macOS)
+  uninstall -u  Remove 's' from the system
+  update, --u   Rebuild and update 's'
+  version, --v  Show installed version
+  help, --h     Show this menu
+
+Tip: Use 's install -y' to install without prompts.
 	`)
 }
