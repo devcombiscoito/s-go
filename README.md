@@ -34,6 +34,7 @@ Você também pode baixar os binários prontos na página de Releases do GitHub:
 - `s` (Linux)
 - `s.exe` (Windows)
 - `s-darwin-amd64` e `s-darwin-arm64` (macOS)
+No Windows, se você executar `s.exe install` e não tiver `winget` ou `choco`, o comando pergunta qual instalar e tenta instalar automaticamente.
 
 ### Checksums
 Para gerar os checksums dos binários:
@@ -109,6 +110,7 @@ You can also download prebuilt binaries from GitHub Releases:
 - `s` (Linux)
 - `s.exe` (Windows)
 - `s-darwin-amd64` and `s-darwin-arm64` (macOS)
+On Windows, if you run `s.exe install` without `winget` or `choco`, the command asks which one to install and attempts it automatically.
 
 ### Checksums
 Generate checksums for release binaries:
