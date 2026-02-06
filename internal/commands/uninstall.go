@@ -9,11 +9,19 @@ import (
 func NoAskUninstall() {
 	fmt.Println("==> Removendo o comando 's' do sistema...")
 
-	remove := exec.Command("sudo", "rm", "/usr/local/bin/s")
-	remove.Stdout = os.Stdout
-	remove.Stderr = os.Stderr
-	remove.Stdin = os.Stdin
-	remove.Run()
+	installPath := installBinaryPath()
+	if isWindows() {
+		if err := os.Remove(installPath); err != nil {
+			fmt.Println("Falha ao remover o binário:", err)
+			return
+		}
+	} else {
+		remove := exec.Command("sudo", "rm", installPath)
+		remove.Stdout = os.Stdout
+		remove.Stderr = os.Stderr
+		remove.Stdin = os.Stdin
+		remove.Run()
+	}
 
 	fmt.Println("==> Desinstalado com sucesso.")
 }

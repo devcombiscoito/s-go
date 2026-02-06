@@ -8,19 +8,38 @@ import (
 
 func NoAskInstall() {
 	fmt.Println("==> Compilando e instalando...")
+
+	if !ensureDependencies() {
+		return
+	}
 	
-	build := exec.Command("go", "build", "-o", "s", "./cmd/s")
+	binName := binaryName()
+	build := exec.Command("go", "build", "-o", binName, "./cmd/s")
 	build.Stdout = os.Stdout
 	build.Stderr = os.Stderr
 	build.Run()
 
-	os.Chmod("s", 0755)
+	if !isWindows() {
+		os.Chmod(binName, 0755)
+	}
 
-	move := exec.Command("sudo", "mv", "s", "/usr/local/bin/s")
-	move.Stdout = os.Stdout
-	move.Stderr = os.Stderr
-	move.Stdin = os.Stdin
-	move.Run()
+	installPath := installBinaryPath()
+	if isWindows() {
+		if err := ensureInstallDir(); err != nil {
+			fmt.Println("Falha ao criar diretório de instalação:", err)
+			return
+		}
+		if err := moveFile(binName, installPath); err != nil {
+			fmt.Println("Falha ao mover o binário:", err)
+			return
+		}
+	} else {
+		move := exec.Command("sudo", "mv", binName, installPath)
+		move.Stdout = os.Stdout
+		move.Stderr = os.Stderr
+		move.Stdin = os.Stdin
+		move.Run()
+	}
 
 	fmt.Println("==> Pronto! O comando 's' agora é global.")
 }
