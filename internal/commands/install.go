@@ -33,6 +33,8 @@ func NoAskInstall() {
 			fmt.Println("Falha ao mover o binário:", err)
 			return
 		}
+		// Garante que o diretório de instalação esteja no PATH do usuário.
+		ensurePathOnWindows()
 	} else {
 		move := exec.Command("sudo", "mv", binName, installPath)
 		move.Stdout = os.Stdout

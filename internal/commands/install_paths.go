@@ -1,8 +1,10 @@
 package commands
 
 import (
+	"fmt"
 	"io"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"runtime"
 )
@@ -64,4 +66,41 @@ func moveFile(src, dst string) error {
 		return err
 	}
 	return os.Remove(src)
+}
+
+// ensurePathOnWindows garante que o diretório de instalação esteja no PATH do usuário.
+// Ele atualiza apenas o PATH de usuário (não o de sistema) usando PowerShell.
+func ensurePathOnWindows() {
+	if !isWindows() {
+		return
+	}
+
+	dir := installDir()
+	if dir == "" {
+		return
+	}
+
+	// Script PowerShell:
+	// - Lê o PATH de usuário
+	// - Se estiver vazio, define apenas com o dir
+	// - Se já existir, adiciona se ainda não estiver presente
+	script := fmt.Sprintf(`
+$p = [Environment]::GetEnvironmentVariable('Path', 'User')
+if (-not $p) {
+  $p = '%s'
+} else {
+  $parts = $p -split ';'
+  if ($parts -notcontains '%s') {
+    $p = $p + ';%s'
+  }
+}
+[Environment]::SetEnvironmentVariable('Path', $p, 'User')
+`, dir, dir, dir)
+
+	cmd := exec.Command("powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", script)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	if err := cmd.Run(); err == nil {
+		fmt.Println("==> PATH do usuário atualizado. Abra um novo terminal para usar 's'.")
+	}
 }

@@ -12,7 +12,8 @@ func Verify() {
 	CheckUpdate()
 
 	if len(os.Args) < 2 {
-		fmt.Println("Por favor, forneça um argumento.")
+		// Sem argumentos: mostra o help para dar uma boa experiência inicial.
+		help.Help()
 		return
 	}
 
@@ -22,7 +23,7 @@ func Verify() {
 		runners.RodarGo()
 	} else if arg == "html" || arg == "-h" {
 		runners.RodarHtml()
-	} else if arg == "help" || arg == "--h" {
+	} else if arg == "help" || arg == "--h" || arg == "--help" {
 		help.Help()
 	} else if arg == "python" || arg == "-p" {
 		runners.RodarPy()
@@ -57,9 +58,11 @@ func Verify() {
 		} else {
 			commands.AskUninstall()
 		}
-	} else if arg == "version" || arg == "--v" {
+	} else if arg == "version" || arg == "--v" || arg == "-v" {
 		fmt.Printf("s version %s\n", CurrentVersion)
 	} else {
-		fmt.Println(`Argumento não identificado. Escreva "s help" para ajuda.`)
+		fmt.Println(`Argumento não identificado.`)
+		fmt.Println(`Use "s help" para ver os comandos disponíveis.`)
+		fmt.Println(`Exemplos: "s go", "s python", "s html", "s init".`)
 	}
 }

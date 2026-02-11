@@ -3,6 +3,8 @@
 
 O `s-go` é uma ferramenta CLI (Command Line Interface) projetada para automatizar a criação de arquivos boilerplate e estruturas de projetos para Go, Python e Web (HTML/CSS/JS), ajudando você a economizar tempo em configurações repetitivas.
 
+Versão estável atual: **2.7.2** (bugfix release sobre a 2.7.0, sem novas features).
+
 Nota: a versão em inglês está no final.
 
 ## 🛠️ Instalação
@@ -21,7 +23,7 @@ O comando `install` verifica dependências (`go`, `git`, `python`) e oferece ins
 
 2. **Compile o projeto**:
    ```bash
-   go build -o s ./cmd/s
+   go build -o s ./cmd/s (s.exe no windows e s-darwin não sei o quela)
    ```
 
 3. **Instale no sistema**:
@@ -69,8 +71,8 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 | `s init` |  | Fluxo interativo para criar projeto. |
 | `s config list` |  | Lista configurações. |
 | `s config edit` |  | Abre o arquivo de configuração no editor. |
-| `s version` | `s --v` | Exibe a versão instalada do `s-go`. |
-| `s help` | `s --h` | Exibe a lista de comandos e ajuda. |
+| `s version` | `s -v`, `s --v` | Exibe a versão instalada do `s-go`. |
+| `s help` | `s --h`, `s --help` | Exibe a lista de comandos e ajuda. |
 | `s uninstall` | `s -u`| Remove o comando `s` do seu sistema. |
 
 ### Dicas Úteis
@@ -79,7 +81,8 @@ Aqui estão os comandos que você pode usar para agilizar seu desenvolvimento:
 
 ## ✅ Suporte LTS
 A versão **2.0.0** é a linha **LTS** atual.
-**LTS**: suporte por **6 meses após o release** (ex: lançado em 2026-02-06 → suporte até 2026-08-06).\n+**Não-LTS**: suporte por **50 dias após o release** (ex: lançado em 2026-02-06 → suporte até 2026-03-28).
+- **LTS**: suporte por **6 meses após o release** (ex: lançado em 2026-02-06 → suporte até 2026-08-06).
+- **Não-LTS**: suporte por **50 dias após o release** (ex: lançado em 2026-02-06 → suporte até 2026-03-28).
 
 ## 📁 Estrutura do Projeto
 
@@ -96,6 +99,8 @@ Feito com dedicação por Lorenzo. Aproveite!
 # s-go 🚀 (English)
 
 `s-go` is a CLI tool designed to automate boilerplate files and project structures for Go, Python, and Web (HTML/CSS/JS), helping you save time on repetitive setup.
+
+Current stable version: **2.7.2** (bugfix release on top of 2.7.0, no new features).
 
 ## 🛠️ Installation
 
@@ -159,8 +164,8 @@ This creates the `SHA256SUMS` file.
 | `s init` |  | Interactive project creation. |
 | `s config list` |  | Lists configurations. |
 | `s config edit` |  | Opens the config file in the editor. |
-| `s version` | `s --v` | Shows the installed `s-go` version. |
-| `s help` | `s --h` | Shows help and commands. |
+| `s version` | `s -v`, `s --v` | Shows the installed `s-go` version. |
+| `s help` | `s --h`, `s --help` | Shows help and commands. |
 | `s uninstall` | `s -u`| Removes the `s` command from your system. |
 
 ### Tips
@@ -169,7 +174,8 @@ This creates the `SHA256SUMS` file.
 
 ## ✅ LTS Support
 Version **2.0.0** is the current **LTS** line.
-**LTS**: support for **6 months after release** (e.g., released on 2026-02-06 → supported until 2026-08-06).\n+**Non‑LTS**: support for **50 days after release** (e.g., released on 2026-02-06 → supported until 2026-03-28).
+- **LTS**: support for **6 months after release** (e.g., released on 2026-02-06 → supported until 2026-08-06).
+- **Non‑LTS**: support for **50 days after release** (e.g., released on 2026-02-06 → supported until 2026-03-28).
 
 ## 📁 Project Structure
 

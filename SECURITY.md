@@ -50,7 +50,7 @@ Exemplos: release em **2026-02-06** → LTS até **2026-08-06**; não‑LTS até
 | Version | Supported          |
 | ------- | ------------------ |
 | 2.0.x (LTS) | :white_check_mark: |
-| 2.7.x       | :white_check_mark: |
+| 2.7.x (inclui 2.7.2 bugfix) | :white_check_mark: |
 | 1.0.x       | :white_check_mark: |
 | 0.0.0       | :white_check_mark: |
 
@@ -125,7 +125,7 @@ Examples: released on **2026-02-06** → LTS until **2026-08-06**; non‑LTS unt
 | Version | Supported          |
 | ------- | ------------------ |
 | 2.0.x (LTS) | :white_check_mark: |
-| 2.7.x       | :white_check_mark: |
+| 2.7.x (includes 2.7.2 bugfix) | :white_check_mark: |
 | 1.0.x       | :white_check_mark: |
 | 0.0.0       | :white_check_mark: |
 
